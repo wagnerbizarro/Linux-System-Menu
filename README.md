@@ -1,6 +1,3 @@
-# Linux-System-Menu  
-checks the system  
-
 # Autor  
 Wagner Bizarro  
 
