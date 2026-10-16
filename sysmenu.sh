@@ -1,9 +1,5 @@
 #!/bin/bash
 exit=0
-#sysver=1
-
-#read -p "Press 2 if your system is like RedHat(2), Debian is default:" sysver
-
 
 until [ $exit -eq 1 ]; do
     clear
@@ -40,11 +36,9 @@ until [ $exit -eq 1 ]; do
     	    fi
             ;;
         5)
-            # free -h | grep "Mem" | cut -d ' ' -f18
             free -h
             ;;
         6)
-            # df -h | grep "/dev/sd"
             df -h
             ;;
         7)
