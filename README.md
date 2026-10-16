@@ -15,6 +15,7 @@ System check
 ## Stack  
 Linux Shell Script  
 
-## Test in
-Linux Mint
-Oracle Linux
+## Tested on
+Linux Mint  
+Oracle Linux  
+
