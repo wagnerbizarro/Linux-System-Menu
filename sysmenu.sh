@@ -1,7 +1,11 @@
 #!/bin/bash
-
 exit=0
-until [$exit -eq 1]; do
+#sysver=1
+
+#read -p "Press 2 if your system is like RedHat(2), Debian is default:" sysver
+
+
+until [ $exit -eq 1 ]; do
     clear
     echo "Linux System Menu"
     echo "1. Exit"
@@ -26,7 +30,14 @@ until [$exit -eq 1]; do
             uptime | cut -d ',' -f1
             ;;
         4)
-            top -b -n 1 | grep ^%CPU | cut -d ',' -f1
+	    sysver=1
+	    read -p "Press 2 if your system is like RedHat(2), Debian is default:" sysver
+
+	    if [ "$sysver" == 2 ]; then
+	    	top -b -n 1 | grep ^%Cpu | cut -d ',' -f1
+    	    else
+            	top -b -n 1 | grep ^%CPU | cut -d ',' -f1
+    	    fi
             ;;
         5)
             # free -h | grep "Mem" | cut -d ' ' -f18
